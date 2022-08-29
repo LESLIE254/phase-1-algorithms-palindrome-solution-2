@@ -1,9 +1,26 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // iterate from the beginning to the middle
+  for(let i = 0; i < word.length / 2; i ++){
+    //check each letter to the corresponding letter from the end
+    const j = word.length-1 -i;
+    const startChar = word[i];
+    const endChar = word[j];
+    //if any letters don't match return false
+    if (startChar !== endChar) return false;
+  }
+  return true;
+
 }
 
 /* 
   Add your pseudocode here
+  make a function that returns true if a word is palindrome.
+  this means the 1st letter is same as the last letter,the 2nd letter
+  is same as 2nd last letter e.tc. until we reach the middle
+  if this is case return true
+  iterate from the beginning to the middle 
+  check each letter to the corresponding letter from the end
+  if any letters do not match return false
 */
 
 /*
